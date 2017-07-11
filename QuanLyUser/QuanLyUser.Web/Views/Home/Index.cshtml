@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts{
+    <script src="~/Scripts/plugins/mustache.min.js"></script>
+    <script src="~/Scripts/plugins/jquery.twbsPagination.min.js"></script>
+    <script src="~/Scripts/plugins/bootbox.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/plugins/jquery-ui.min.js"></script>
+    <script src="~/Scripts/home/homeController.js"></script>
+}
+<h3>Quản lý nhân sự</h3>
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="txtKeyword" placeholder="Search..." />
+        </div>
+        <div class="col-md-3">
+            <input type="text" id="fromDate" class="datepicker">
+        </div>
+        <div class="col-md-3">
+            <input type="text" id="toDate" class="datepicker">
+        </div>
+        <div class="col-md-1">
+            <button id="btnSearch" class="btn btn-primary">Search</button>
+        </div>
+        <div class="col-md-2">
+            <button id="btnAddNew">Add employee</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Tel</td>
+                    <td>Datetime</td>
+                    <td>Status</td>
+                    <td>#</td>
+                </tr>
+            </thead>
+            <tbody id="tblData"></tbody>
+
+        </table>
+        <div id="pagination" class="pagination"></div>
+    </div>
+
+</div>
+
+<script id="data-template" type="x-tmpl-mustache">
+    <tr>
+        <td>{{ID}}</td>
+        <td>{{Name}}</td>
+        <td>{{Email}}</td>
+        <td>{{Phone}}</td>
+        <td>{{CreatedDate}}</td>
+        <td>{{{Status}}}</td>
+        <td>
+            <button class="btn btn-info btnEdit" data-id="{{ID}}"><i class="fa fa-pencil fa-1x" aria-hidden="true"></i></button>
+            <button class="btn btn-danger btnDelete" data-id="{{ID}}"><i class="fa fa-trash-o fa-1x" aria-hidden="true"></i></button>
+        </td>
+
+    </tr>
+</script>
+
+<!--Modal-->
+<div class="modal fade" id="modalAddUpdate" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add/Update</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" id="frmSaveData">
+                    <div class="form-group">
+                        <label for="txtName">Name:</label>
+                        <input type="text" class="form-control" name="txtName" id="txtName">
+                        <input type="hidden" id="hidID" value="0" />
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEmail">Email:</label>
+                        <input type="text" class="form-control" name="txtEmail" id="txtEmail">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtTel">Phone:</label>
+                        <input type="text" class="form-control" name="txtTel" id="txtTel">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtTel">UserName:</label>
+                        <input type="text" class="form-control" name="txtUserName" id="txtUserName">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtTel">Password:</label>
+                        <input type="password" class="form-control" name="txtPassword" id="txtPassword">
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" id="ckStatus"> Active</label>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="btnSave">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>

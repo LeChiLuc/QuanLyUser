@@ -1,0 +1,15 @@
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\bin\Debug\QuanLyUser.Data.dll.config
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\bin\Debug\QuanLyUser.Data.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\bin\Debug\QuanLyUser.Data.pdb
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\bin\Debug\EntityFramework.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\bin\Debug\QuanLyUser.Model.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\bin\Debug\QuanLyUser.Model.pdb
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\bin\Debug\QuanLyUser.Model.dll.config
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\bin\Debug\EntityFramework.xml
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.Data.csprojResolveAssemblyReference.cache
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.Data.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.Data.pdb
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.Data.Migrations.InitialDb.resources
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.Data.csproj.GenerateResource.Cache

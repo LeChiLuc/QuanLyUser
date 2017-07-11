@@ -1,0 +1,24 @@
+﻿@model QuanLyUser.Web.Models.LoginViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="login">
+    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+    {
+        <fieldset>
+            <div class="imgcontainer">
+                <h4>Hãy nhập LoginID và Password</h4>
+            </div>
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" });
+            <div class="container">
+                <label><b>LoginID:</b></label>
+                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control loginId", @placeholder = "Enter UserName" })
+                <label><b>Password:</b></label>
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control", @placeholder = "Enter Password" })
+
+                <button type="submit">Login</button>
+            </div>
+        </fieldset>
+    }
+</div>
