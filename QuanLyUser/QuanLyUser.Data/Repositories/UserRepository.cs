@@ -38,7 +38,7 @@ namespace QuanLyUser.Data.Repositories
                 new SqlParameter("@fromDate",fromDate ?? (object)DBNull.Value),
                 new SqlParameter("@toDate",toDate ?? (object)DBNull.Value)
             };
-            var datas = DbContext.Database.SqlQuery<int>("SearchUsercOUNT @keyword,@fromDate,@toDate", parameters).FirstOrDefault();
+            var datas = DbContext.Database.SqlQuery<int>("SearchUserCount @keyword,@fromDate,@toDate", parameters).FirstOrDefault();
 
             return datas;
         }

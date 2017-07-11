@@ -26,7 +26,7 @@ namespace QuanLyUser.Web.Controllers
         }
         //Hiển thị dữ liệu trên table đồng thời phân trang
         [HttpGet]
-        public JsonResult LoadData(string keyword, DateTime? fromDate, DateTime? toDate, int page, int pageSize=5)
+        public JsonResult LoadData(string keyword, DateTime? fromDate, DateTime? toDate, int page, int pageSize=2)
         {
             int totalRow = 0;
             var db = _userService.LoadData(keyword ,fromDate,toDate,page,pageSize,out totalRow).ToList();

@@ -1,5 +1,5 @@
 ﻿var homeconfig = {
-    pageSize: 5,
+    pageSize: 3,
     pageIndex: 1,
 }
 var homeController = {
