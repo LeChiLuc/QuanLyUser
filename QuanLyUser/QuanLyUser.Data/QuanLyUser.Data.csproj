@@ -58,6 +58,22 @@
     <Compile Include="Migrations\201707100241370_InitialDb.Designer.cs">
       <DependentUpon>201707100241370_InitialDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707120711341_addtrade.cs" />
+    <Compile Include="Migrations\201707120711341_addtrade.Designer.cs">
+      <DependentUpon>201707120711341_addtrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707120727095_addtradeagain.cs" />
+    <Compile Include="Migrations\201707120727095_addtradeagain.Designer.cs">
+      <DependentUpon>201707120727095_addtradeagain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707120742338_editTradeInfo.cs" />
+    <Compile Include="Migrations\201707120742338_editTradeInfo.Designer.cs">
+      <DependentUpon>201707120742338_editTradeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707120814592_editTypeAmount.cs" />
+    <Compile Include="Migrations\201707120814592_editTypeAmount.Designer.cs">
+      <DependentUpon>201707120814592_editTypeAmount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyUserDbContext.cs" />
@@ -77,6 +93,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201707100241370_InitialDb.resx">
       <DependentUpon>201707100241370_InitialDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707120711341_addtrade.resx">
+      <DependentUpon>201707120711341_addtrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707120727095_addtradeagain.resx">
+      <DependentUpon>201707120727095_addtradeagain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707120742338_editTradeInfo.resx">
+      <DependentUpon>201707120742338_editTradeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707120814592_editTypeAmount.resx">
+      <DependentUpon>201707120814592_editTypeAmount.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

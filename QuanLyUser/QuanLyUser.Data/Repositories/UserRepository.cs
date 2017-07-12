@@ -16,6 +16,8 @@ namespace QuanLyUser.Data.Repositories
         User GetById(string userName);
         IEnumerable<User> GetKeyword(string keyword, DateTime? toDate, DateTime? fromDate, int page, int pageSize);
         int GetCount(string keyword, DateTime? toDate, DateTime? fromDate);
+        long spAddUser(string name, string email, string userName, string password, string phone, bool status);
+        User spTrade(int idA,int idB,int amount);
     }
 
     public class UserRepository : RepositoryBase<User>, IUserRepository
@@ -80,6 +82,35 @@ namespace QuanLyUser.Data.Repositories
                         return -1;
                 }
             }
+        }
+
+        public long spAddUser(string name,string email,string userName,string password,string phone,bool status)
+        {
+            var parameters = new SqlParameter[]
+            {
+                new SqlParameter("@Name",name),
+                new SqlParameter("@Email",email),
+                new SqlParameter("@UserName",userName),
+                new SqlParameter("@Password",password),
+                new SqlParameter("@Phone",phone),
+                new SqlParameter("@Status",status)
+            };
+
+            var datas = DbContext.Database.SqlQuery<long>("spAddUser @Name,@Email,@UserName,@Password,@Phone,@Status", parameters).FirstOrDefault();
+            return datas;
+        }
+
+        public User spTrade(int idA, int idB, int amount)
+        {
+            var parameters = new SqlParameter[]
+            {
+                new SqlParameter("@User_Id_A",idA),
+                new SqlParameter("@User_Id_B",idB),
+                new SqlParameter("@Amount",amount)
+            };
+
+            var datas = DbContext.Database.ExecuteSqlCommand("spTradeUser @User_Id_A,@User_Id_B,@Amount", parameters);
+            return new User();
         }
     }
 }

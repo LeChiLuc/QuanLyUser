@@ -3,6 +3,7 @@ using QuanLyUser.Common;
 using QuanLyUser.Data;
 using QuanLyUser.Model.Models;
 using QuanLyUser.Service;
+using QuanLyUser.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,30 @@ namespace QuanLyUser.Web.Controllers
             {
                 data = user,
                 status = true
+            }, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public JsonResult Trade(string strEmployee)
+        {
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            TradeViewModel user = serializer.Deserialize<TradeViewModel>(strEmployee);
+            bool status = false;
+            string message = string.Empty;
+            try
+            {
+                _userService.spTrade(user.IDA,user.IDB,user.Amount);
+                status = true;
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                message = ex.Message;
+            }
+
+            return Json(new
+            {
+                status = status,
+                message = message
             }, JsonRequestBehavior.AllowGet);
         }
         //SaveData bao gồm cả thêm mới và cập nhật bản ghi

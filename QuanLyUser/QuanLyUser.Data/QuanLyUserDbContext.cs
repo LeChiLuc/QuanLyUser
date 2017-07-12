@@ -15,6 +15,7 @@ namespace QuanLyUser.Data
             this.Configuration.LazyLoadingEnabled = false;
         }
         public DbSet<User> Users { set; get; }
+        public DbSet<TradeInfomation> TradeInfomations { set; get; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

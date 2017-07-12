@@ -58,9 +58,17 @@ var homeController = {
             $('#modalAddUpdate').modal('show');
             homeController.resetForm();
         });
+        $('#btnTradeMoney').off('click').on('click', function () {
+            $('#modalTrade').modal('show');
+        });
         $('#btnSave').off('click').on('click', function () {
             if ($('#frmSaveData').valid()) {
                 homeController.saveData();
+            }
+        });
+        $('#btnTrade').off('click').on('click', function () {
+            if ($('#frmTrade').valid()) {
+                homeController.Trade();
             }
         });
         $('.btnEdit').off('click').on('click', function () {
@@ -127,6 +135,39 @@ var homeController = {
                 console.log(err);
             }
         });
+    },
+    Trade: function () {
+        var idA = $('#txtA').val();
+        var idB = $('#txtB').val();
+        var amount = $('#txtAmount').val();
+
+        var employee = {
+            IDA: idA,
+            IDB: idB,
+            Amount: amount
+        }
+        $.ajax({
+            url: '/Home/Trade',
+            data: {
+                strEmployee: JSON.stringify(employee)
+            },
+            type: 'POST',
+            dataType: 'json',
+            success: function (response) {
+                if (response.status == true) {
+                    bootbox.alert("Lưu thành công", function () {
+                        $('#modalTrade').modal('hide');
+                        homeController.loadData(true);
+                    });
+                }
+                else {
+                    bootbox.alert("Lưu không thành công!");
+                }
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        })
     },
     saveData: function () {
         var name = $('#txtName').val();
@@ -231,6 +272,7 @@ var homeController = {
                             ID: item.ID,
                             Name: item.Name,
                             Email: item.Email,
+                            Amount: item.Amount,
                             UserName: item.UserName,
                             Phone: item.Phone,
                             CreatedDate: homeController.formatDatetime(item.CreatedDate),

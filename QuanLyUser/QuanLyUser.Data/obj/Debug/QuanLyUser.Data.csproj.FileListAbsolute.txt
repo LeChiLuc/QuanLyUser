@@ -13,3 +13,7 @@ D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.D
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.Data.pdb
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.Data.Migrations.InitialDb.resources
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.Data.csproj.GenerateResource.Cache
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.Data.Migrations.addtrade.resources
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.Data.Migrations.addtradeagain.resources
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.Data.Migrations.editTradeInfo.resources
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Data\obj\Debug\QuanLyUser.Data.Migrations.editTypeAmount.resources

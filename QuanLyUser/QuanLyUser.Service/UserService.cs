@@ -11,7 +11,7 @@ namespace QuanLyUser.Service
 {
     public interface IUserService
     {
-        User Add(User Product);
+        long Add(User User);
 
         User GetById(int id);
 
@@ -20,6 +20,8 @@ namespace QuanLyUser.Service
         User Delete(int id);
 
         IEnumerable<User> GetAll();
+
+        User spTrade(int idA, int idB, int amount);
 
         int Login(string userName, string passWord);
 
@@ -39,9 +41,9 @@ namespace QuanLyUser.Service
             this._userRepository = userRepository;
         }
 
-        public User Add(User User)
+        public long Add(User User)
         {
-            var user = _userRepository.Add(User);
+            long user = _userRepository.spAddUser(User.Name,User.Email,User.UserName,User.Password,User.Phone,User.Status.HasValue);
             _unitOfWork.Commit();
             return user;
         }
@@ -95,5 +97,9 @@ namespace QuanLyUser.Service
             _unitOfWork.Commit();
         }
 
+        public User spTrade(int idA, int idB, int amount)
+        {
+            return _userRepository.spTrade(idA, idB, amount);
+        }
     }
 }
