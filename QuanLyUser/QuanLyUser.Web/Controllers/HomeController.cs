@@ -10,6 +10,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
+using System.Web.Security;
 
 namespace QuanLyUser.Web.Controllers
 {
@@ -73,29 +74,75 @@ namespace QuanLyUser.Web.Controllers
                 message = message
             }, JsonRequestBehavior.AllowGet);
         }
+
+
+        public JsonResult CheckName(string UserName)
+        {
+            System.Threading.Thread.Sleep(1000);
+            //var userName = _userService.CheckForDuplication(UserName);
+            var checkUser = _userService.GetById(UserName);
+            if(checkUser==null)
+            {
+                return Json(new
+                {
+                    data = checkUser,
+                    status = true
+                }, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(new
+                {
+                    data = checkUser,
+                    status = false
+                }, JsonRequestBehavior.AllowGet);
+            }
+            
+        }
         //SaveData bao gồm cả thêm mới và cập nhật bản ghi
         [HttpPost]
         public JsonResult SaveData(string strEmployee)
         {
             JavaScriptSerializer serializer = new JavaScriptSerializer();
-            User user = serializer.Deserialize<User>(strEmployee);
+            UserViewModel userViewModel = serializer.Deserialize<UserViewModel>(strEmployee);
+            var user = new User();
+            user.Name = userViewModel.Name;
+            user.Email = userViewModel.Email;
+            user.UserName = userViewModel.UserName;
+            user.Password = userViewModel.Password;
+            user.CreatedDate = userViewModel.CreatedDate;
+            user.Phone = userViewModel.Phone;
+            user.ID = userViewModel.ID;
+            user.Status = userViewModel.Status;
             bool status = false;
             string message = string.Empty;
+            var checkUser = _userService.GetById(user.UserName);
+            
             //Thêm người dùng nếu id = 0
             if (user.ID == 0)
             {
-                var encryptedMd5Pas = Encryptor.MD5Hash(user.Password);
-                user.Password = encryptedMd5Pas;
-                user.CreatedDate = DateTime.Now;
-                try
+                if(ModelState.IsValid)
                 {
-                    _userService.Add(user);
-                    status = true;
-                }
-                catch (Exception ex)
-                {
-                    status = false;
-                    message = ex.Message;
+                    if (checkUser == null)
+                    {
+                        var encryptedMd5Pas = Encryptor.MD5Hash(user.Password);
+                        user.Password = encryptedMd5Pas;
+                        user.CreatedDate = DateTime.Now;
+                        try
+                        {
+                            _userService.Add(user);
+                            status = true;
+                        }
+                        catch (Exception ex)
+                        {
+                            status = false;
+                            message = ex.Message;
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "UserName đã được sử dụng.");
+                    }
                 }
             }
             else

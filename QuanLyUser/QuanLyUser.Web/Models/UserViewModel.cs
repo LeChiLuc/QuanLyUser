@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace QuanLyUser.Web.Models
 {
     public class UserViewModel
     {
         public int ID { set; get; }
-
+      
         public string Name { set; get; }
-
+        
         public string Email { set; get; }
 
         public string UserName { get; set; }

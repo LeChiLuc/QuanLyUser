@@ -107,6 +107,31 @@ var homeController = {
         $(function () {
             $(".datepicker").datepicker();
         });
+        $("#btnCheck").click(function () {
+            var name = $("#txtUserName").val(); //Value entered in the text box
+            var status = $("#divStatus"); //DIV object to display the status message
+            status.html("Checking....").removeClass(); //While our Thread works, we will show some message to indicate the progress
+         
+            $.ajax({
+                url: '/Home/CheckName',
+                data: {
+                    UserName: name
+                },
+                type: 'POST',
+                dataType: 'json',
+                success: function (response) {
+                    if (response.status == true) {
+                        status.html(name + " có thể dùng!").addClass("green");
+                    }
+                    else {
+                        status.html(name + " đã được sử dụng!").addClass("red");
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+        });
     },
     loadDetail: function (id) {
         $.ajax({
@@ -186,6 +211,7 @@ var homeController = {
             Password: password,
             ID: id
         }
+        
         $.ajax({
             url: '/Home/SaveData',
             data: {
@@ -201,11 +227,11 @@ var homeController = {
                     });
                 }
                 else {
-                    bootbox.alert("Lưu không thành công!");
+                    bootbox.alert("Lưu không thành công!");                   
                 }
             },
             error: function (err) {
-                console.log(err);
+                console.log(err.message);
             }
         })
     },

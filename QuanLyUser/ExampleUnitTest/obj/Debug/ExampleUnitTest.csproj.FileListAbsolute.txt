@@ -1,0 +1,4 @@
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\ExampleUnitTest\bin\Debug\ExampleUnitTest.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\ExampleUnitTest\bin\Debug\ExampleUnitTest.pdb
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\ExampleUnitTest\obj\Debug\ExampleUnitTest.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\ExampleUnitTest\obj\Debug\ExampleUnitTest.pdb

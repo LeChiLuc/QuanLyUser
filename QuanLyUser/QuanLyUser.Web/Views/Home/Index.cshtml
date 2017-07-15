@@ -8,6 +8,7 @@
     <script src="~/Scripts/plugins/jquery.twbsPagination.min.js"></script>
     <script src="~/Scripts/plugins/bootbox.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/Scripts/plugins/jquery-ui.min.js"></script>
     <script src="~/Scripts/home/homeController.js"></script>
 }
@@ -85,7 +86,7 @@
                 <h4 class="modal-title">Add/Update</h4>
             </div>
             <div class="modal-body">
-                <form role="form" id="frmSaveData">
+                <form role="form"  id="frmSaveData" name="addUpdate">
                     <div class="form-group">
                         <label for="txtName">Name:</label>
                         <input type="text" class="form-control" name="txtName" id="txtName">
@@ -102,6 +103,8 @@
                     <div class="form-group">
                         <label for="txtTel">UserName:</label>
                         <input type="text" class="form-control" name="txtUserName" id="txtUserName">
+                        <input type="button" id="btnCheck" value="Check!"/>
+                        <div id="divStatus"></div>
                     </div>
                     <div class="form-group">
                         <label for="txtTel">Password:</label>
@@ -112,6 +115,7 @@
                     </div>
 
                 </form>
+                
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary" id="btnSave">Save</button>

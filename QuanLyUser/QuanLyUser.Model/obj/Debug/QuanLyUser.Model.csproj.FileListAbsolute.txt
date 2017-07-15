@@ -5,6 +5,5 @@ D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Model\bin\Debug\EntityFrame
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Model\bin\Debug\EntityFramework.SqlServer.dll
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Model\bin\Debug\EntityFramework.xml
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Model\bin\Debug\EntityFramework.SqlServer.xml
-D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Model\obj\Debug\QuanLyUser.Model.csprojResolveAssemblyReference.cache
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Model\obj\Debug\QuanLyUser.Model.dll
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Model\obj\Debug\QuanLyUser.Model.pdb

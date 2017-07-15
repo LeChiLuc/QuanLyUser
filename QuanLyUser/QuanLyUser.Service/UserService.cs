@@ -18,6 +18,7 @@ namespace QuanLyUser.Service
         void Save();
 
         User Delete(int id);
+        User CheckForDuplication(string FirstName);
 
         IEnumerable<User> GetAll();
 
@@ -45,6 +46,12 @@ namespace QuanLyUser.Service
         {
             long user = _userRepository.spAddUser(User.Name,User.Email,User.UserName,User.Password,User.Phone,User.Status.HasValue);
             _unitOfWork.Commit();
+            return user;
+        }
+
+        public User CheckForDuplication(string userName)
+       {
+            var user = _userRepository.GetMulti(p => p.UserName == userName).FirstOrDefault();
             return user;
         }
 

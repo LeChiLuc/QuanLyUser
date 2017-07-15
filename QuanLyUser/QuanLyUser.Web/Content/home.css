@@ -7,7 +7,13 @@
     margin-top:50px;
     border:2px solid black;
 }
+.green {
+    color: Green;
+}
 
+.red {
+    color: Red;
+}
 /* Full-width inputs */
 input[type=text], input[type=password] {
     width: 100%;

@@ -102,3 +102,11 @@ D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.Owin.Host
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\AutoMapper.dll
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\AutoMapper.xml
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\QuanLyUser.Service.dll.config
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\QuanLyUser.UnitTest.dll.config
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Moq.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Castle.Core.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Moq.xml
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\ExampleUnitTest.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\ExampleUnitTest.pdb
