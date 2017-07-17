@@ -45,6 +45,7 @@ namespace QuanLyUser.UnitTest.Repository
 
             Assert.IsNotNull(result);
             Assert.AreNotEqual(1184, result.ID);
+            
         }
 
         [TestMethod]
@@ -77,5 +78,6 @@ namespace QuanLyUser.UnitTest.Repository
             Assert.AreNotEqual("1191",result);
             Assert.IsNotNull(result);
         }
+
     }
 }

@@ -2,3 +2,4 @@ D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Common\bin\Debug\QuanLyUser
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Common\bin\Debug\QuanLyUser.Common.pdb
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Common\obj\Debug\QuanLyUser.Common.dll
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Common\obj\Debug\QuanLyUser.Common.pdb
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Common\obj\Debug\QuanLyUser.Common.csprojResolveAssemblyReference.cache

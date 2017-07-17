@@ -7,6 +7,7 @@ using QuanLyUser.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -51,7 +52,6 @@ namespace QuanLyUser.UnitTest.Service
         public void User_Service_Create()
         {
             User user = new User();
-            int id = 1;
             user.Name = "Test";
             user.Phone = "091238182";
             user.Status = true;
@@ -67,20 +67,36 @@ namespace QuanLyUser.UnitTest.Service
             Assert.IsNotNull(result);
         }
 
-        //[TestMethod]
-        //public void User_Service_Delete()
-        //{
-        //    var user = new User();
-        //    user.ID = 1185;
-        //    _mockRepository.Setup(m => m.Delete(user.ID)).Returns((User p) =>
-        //    {
-        //        p.ID = 1181;
-        //        return p;
-        //    });
-        //    var result = _userService.Delete(user);
+        [TestMethod]
+        public void User_Service_Delete()
+        {
+            var user1 = new User() { ID = 1, Name = "PERSON_CODE=1" };
+            var user2 = new User() { ID = 2, Name = "PERSON_CODE=2" };
+            var user3 = new User() { ID = 3, Name = "PERSON_CODE=3" };
+            var events = new List<User>() { user1, user2, user3};
+            _mockRepository.Setup(m => m.Delete(It.IsAny<int>()))
+                .Callback((int userId)=>{
+                    events.Remove(user2);
+                });
+            int count = events.Count();
+            Assert.AreEqual(3, count);
+        }
 
-        //    Assert.AreNotEqual(1181, result);
-        //    Assert.IsNotNull(result);
+        //[TestMethod]
+        //public void User_Service_Update()
+        //{
+        //    const int customerId = 5;
+
+        //    var mockCustomer = new Mock<User>();
+
+        //    mockCustomer.SetupGet(x => x.ID)
+        //        .Returns(customerId);
+
+        //    _mockRepository.Setup(x => x.GetSingleById(It.IsAny<int>()));
+
+        //    var result = _userService.GetById(customerId);
+
+        //    Assert.AreEqual(customerId, result.ID);
         //}
     }
 }
