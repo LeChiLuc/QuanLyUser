@@ -110,3 +110,14 @@ D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Castle.Core.dll
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Moq.xml
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\ExampleUnitTest.dll
 D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\ExampleUnitTest.pdb
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.AspNet.SignalR.Client.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.AspNet.SignalR.Owin.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.Owin.Security.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\System.Web.Cors.dll
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.AspNet.SignalR.Client.xml
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.AspNet.SignalR.Owin.xml
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\BinhAnh\_Project\QuanLyUser\QuanLyUser\QuanLyUser.Web\bin\Microsoft.Owin.Security.xml

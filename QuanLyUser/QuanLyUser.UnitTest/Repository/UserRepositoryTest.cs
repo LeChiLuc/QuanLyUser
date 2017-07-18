@@ -16,7 +16,6 @@ namespace QuanLyUser.UnitTest.Repository
         IDbFactory dbFactory;
         IUserRepository objRepository;
         IUnitOfWork unitOfWork;
-
         [TestInitialize]
         public void Initialize()
         {
@@ -24,28 +23,30 @@ namespace QuanLyUser.UnitTest.Repository
             objRepository = new UserRepository(dbFactory);
             unitOfWork = new UnitOfWork(dbFactory);
         }
+        [TestMethod]
+        public void User_Repository_Create()
+        {
+            //Arrange
+            User user = new User();
+            user.Name = "Test999";
+            user.Phone = "090213899";
+            user.Status = true;
+
+            //Act
+            var result = objRepository.Add(user);
+            unitOfWork.Commit();
+
+            //Assert
+            Assert.IsNotNull(result);
+            Assert.AreNotEqual(1223, result.ID);
+
+        }
 
         [TestMethod]
         public void User_Repository_GetAll()
         {
             var list = objRepository.GetAll().ToList();
             Assert.AreNotEqual(3, list.Count);
-        }
-
-        [TestMethod]
-        public void User_Repository_Create()
-        {
-            User user = new User();
-            user.Name = "Test User";
-            user.Phone = "090213899";
-            user.Status = true;
-
-            var result = objRepository.Add(user);
-            unitOfWork.Commit();
-
-            Assert.IsNotNull(result);
-            Assert.AreNotEqual(1184, result.ID);
-            
         }
 
         [TestMethod]

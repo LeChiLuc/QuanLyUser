@@ -17,7 +17,7 @@ namespace QuanLyUser.UnitTest.ExampleUnitTest
             //Arrange
             CalculatorOp sut = new CalculatorOp();
             //Act
-            int result = sut.Add(5, 4);
+            int result = sut.Add(5, 4); //Cộng
             //Assert
             Assert.AreEqual(9, result);
         }
